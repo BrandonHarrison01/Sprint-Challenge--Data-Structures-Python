@@ -4,6 +4,7 @@ class RingBuffer:
     self.current = 0
     self.storage = [None]*capacity
 
+
   def append(self, item):
 
     if self.capacity == self.current:
@@ -13,11 +14,7 @@ class RingBuffer:
     self.current += 1
 
 
-
-
-
   def get(self):
-
     res = []
     
     for i in self.storage:
@@ -25,23 +22,3 @@ class RingBuffer:
         res.append(i)
 
     return res
-
-
-
-
-
-
-
-
-
-# buffer = RingBuffer(3)
-# def buffer_test():
-#   buffer.append('a')
-#   buffer.append('b')
-#   buffer.append('c')
-#   buffer.append('d')
-#   buffer.append('e')
-#   buffer.append('f')
-#   buffer.get()
-
-# print(buffer_test())
